@@ -43,7 +43,7 @@ public class StudentRestController {
 		// just index into the list....keep it simple for now
 
 		// check the studentId against the list size
-		if ((studentId < 0) || (studentId > theStudents.size()-1)) {
+		if ((studentId < 0) || (studentId >= theStudents.size())) {
 			throw new StudentNotFoundException("Student id is not found - " + studentId);
 
 		}
